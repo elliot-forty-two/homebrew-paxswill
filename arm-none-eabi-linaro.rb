@@ -48,14 +48,14 @@ class ArmNoneEabiLinaro < Formula
       ENV['CPPFLAGS'] = "-I#{HOMEBREW_PREFIX}/include"
       ENV['LDFLAGS'] = "-L#{HOMEBREW_PREFIX}/lib"
     end
-    ENV.set_cflags "-Os -w -pipe"
+    #ENV.set_cflags "-Os -w -pipe"
 
     # We need to use our toolchain during the build process, prepend it to PATH
     ENV.prepend 'PATH', bin, ':'
 
-    # Build binutils and newlib alongside gcc for simplicity
+    # Build newlib alongside gcc for simplicity
     source_dir = Pathname.new Dir.pwd
-    [LinaroGdb, LinaroNewlib, LinaroBinutils].each do |formula|
+    [LinaroGdb, LinaroNewlib].each do |formula|
       formula.new.brew do |brew|
         system "rsync", "-av", "--ignore-existing", Dir.pwd+'/', source_dir
       end
