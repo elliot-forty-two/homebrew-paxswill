@@ -3,33 +3,28 @@ require 'formula'
 class LinaroNewlib < Formula
   homepage 'http://www.sourceware.org/newlib/'
   url 'ftp://sources.redhat.com/pub/newlib/newlib-1.20.0.tar.gz'
+  mirror 'http://mirrors.kernel.org/sources.redhat.com/newlib/newlib-1.20.0.tar.gz'
   sha1 '65e7bdbeda0cbbf99c8160df573fd04d1cbe00d1'
-end
-
-class LinaroBinutils < Formula
-  homepage 'http://www.gnu.org/software/binutils/binutils.html'
-  url 'http://ftpmirror.gnu.org/binutils/binutils-2.22.tar.gz'
-  mirror 'http://ftp.gnu.org/gnu/binutils/binutils-2.22.tar.gz'
-  md5 '8b3ad7090e3989810943aa19103fdb83'
 end
 
 class LinaroGdb < Formula
   homepage 'https://launchpad.net/gdb-linaro'
-  url 'https://launchpad.net/gdb-linaro/7.4/7.4-2012.06/+download/gdb-linaro-7.4-2012.06.tar.bz2'
-  md5 'f18fb5745da8bf3576f83971201acf12'
+  url 'https://launchpad.net/gdb-linaro/7.5/7.5-2012.12-1/+download/gdb-linaro-7.5-2012.12-1.tar.bz2'
+  md5 '016cf2c5ed06adf7c601e3301a14e37'
 end
 
 class ArmNoneEabiLinaro < Formula
   homepage 'https://launchpad.net/gcc-linaro'
-  url 'https://launchpad.net/gcc-linaro/4.7/4.7-2012.06/+download/gcc-linaro-4.7-2012.06.tar.bz2'
-  md5 'd82f23f7feaad1721932481fe6fbc99c'
-  version '2012.06'
+  url 'https://launchpad.net/gcc-linaro/4.7/4.7-2013.01/+download/gcc-linaro-4.7-2013.01.tar.bz2'
+  md5 '823516979de64df3ab6351c5ad3a9773'
+  version '2013.01'
   
   depends_on 'gmp'
   depends_on 'mpfr'
   depends_on 'libmpc'
   depends_on 'ppl'
   depends_on 'cloog'
+  depends_on 'binutils'
 
   def install
     # Define the target triple
