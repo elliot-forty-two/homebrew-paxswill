@@ -10,7 +10,7 @@ end
 class LinaroGdb < Formula
   homepage 'https://launchpad.net/gdb-linaro'
   url 'https://launchpad.net/gdb-linaro/7.5/7.5-2012.12-1/+download/gdb-linaro-7.5-2012.12-1.tar.bz2'
-  md5 '016cf2c5ed06adf7c601e3301a14e37'
+  md5 '016cf2c5ed06adf7c601e3301a14e370'
 end
 
 class ArmNoneEabiLinaro < Formula
